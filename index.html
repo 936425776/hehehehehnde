@@ -78,6 +78,7 @@
       <script>
           (()=>{
             const index = ~~(Math.random() * 100)
+            const index2 = ~~(Math.random() * 100)
             const hundredFamilyNames = ['赵', '钱', '孙', '李', '周', '吴', '郑', '王',
             '冯', '陈', '褚', '卫', '蒋', '沈', '韩', '杨',
             '朱', '秦', '尤', '许', '何', '吕', '施', '张',
@@ -97,7 +98,7 @@
             '杜', '阮', '蓝', '闵', '席', '季', '麻', '强',
             '贾', '路', '娄', '危'];
             let id = `020203${index}${index}`,
-                userOption =  { name: `${hundredFamilyNames[index]}二狗`, age:index, sex: index % 2 === 0 ?'男':'女' };
+                userOption =  { name: `${hundredFamilyNames[index]+hundredFamilyNames[index2]}`, age:index, sex: index % 2 === 0 ?'男':'女' };
             window.authing.identify(id, userOption );
             document.write(`id:${id}</br>`,`姓名:${userOption.name}</br>`,`年龄:${index}</br>`,`性别:${userOption.sex}</br>`)
           })()
